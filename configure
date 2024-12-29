@@ -4750,6 +4750,7 @@ fi
 exesuf() {
     case $1 in
         mingw32*|mingw64*|msys*|win32|win64|cygwin*|*-dos|freedos|opendos|os/2*|symbian) echo .exe ;;
+        riscovite) echo '!' ;;
     esac
 }
 
@@ -5991,6 +5992,8 @@ case $target_os in
                       -l:libc.dso -l:libm.dso -l:euser.dso -l:libcrt0.lib
         ;;
     minix)
+        ;;
+    riscovite)
         ;;
     none)
         ;;
